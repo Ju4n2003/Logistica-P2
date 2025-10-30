@@ -1,0 +1,190 @@
+ 
+ PROYECTO FINAL 
+Plataforma de Logística 
+Curso: Programación //  
+Página 1 de 4 
+ 
+ PROYECTO FINAL - PGII 
+DESCRIPCIÓN DEL PROYECTO FINAL - CONTEXTO 
+Desarrollar una plataforma de logística y envíos urbanos tipo “same-day”, donde 
+usuarios finales solicitan recolecciones y entregas dentro de la ciudad. La 
+plataforma permite cotizar tarifas, programar envíos, rastrear paquetes, agregar 
+servicios adicionales (seguro, entrega prioritaria), pagar y recibir notificaciones de 
+estado. Existen dos perfiles: Usuario y Administrador (operaciones). 
+1. Requerimientos del Usuario 
+La entidad Usuario representa a cada persona que utiliza la plataforma de 
+logística y envíos urbanos. Cada usuario tiene un identificador único (idUsuario), 
+nombre completo, correo electrónico, número de teléfono y un conjunto de 
+direcciones frecuentes que pueden usarse como origen o destino de envíos. 
+Además, el usuario puede registrar métodos de pago simulados, crear y gestionar 
+solicitudes de envío, agregar servicios adicionales, consultar su historial de 
+entregas y descargar reportes. 
+Requisito Especificación 
+RF-001 Registrarse y/o iniciar sesión. 
+RF-002 Gestionar perfil (nombre, correo, teléfono, direcciones frecuentes). 
+RF-003 Cotizar tarifa de envío según origen, destino, peso, volumen y 
+prioridad. 
+RF-004 Crear, modificar y cancelar solicitudes de envío antes de ser 
+asignadas. 
+RF-005 Pagar envíos y consultar comprobantes. 
+RF-006 Rastrear estado del envío (Solicitado, Asignado, En Ruta, Entregado, 
+Incidencia). 
+RF-007 Agregar servicios adicionales al envío (seguro, frágil, firma requerida, 
+prioridad). 
+RF-008 Consultar historial de envíos con filtros por fecha y estado. 
+RF-009 Descargar reportes de sus envíos en CSV o PDF. 
+2. Requerimientos del Administrador 
+Requisito Especificación 
+RF-010 Gestionar usuarios (crear/actualizar/eliminar/listar). 
+RF-011 Gestionar repartidores y su disponibilidad 
+(crear/actualizar/eliminar/listar). 
+RF-012 Asignar/reasignar envíos a repartidores, registrar incidencias y cambios 
+de estado. 
+RF-013 Panel de métricas: tiempos promedio de entrega, servicios adicionales 
+más usados, ingresos por periodo, incidencias por zona. 
+RF-014 Visualización de métricas con JavaFX Charts (líneas, barras, pie). 
+ 
+ PROYECTO FINAL 
+Plataforma de Logística 
+Curso: Programación //  
+Página 2 de 4 
+ 
+3. Requerimientos sobre Entidades 
+3.1. Usuario 
+La entidad Usuario representa a las personas que utilizan la plataforma para 
+solicitar y gestionar envíos. Cada usuario tiene un identificador único (idUsuario), 
+nombre completo, correo electrónico, número de teléfono y un conjunto de 
+direcciones frecuentes. Además, cada usuario puede asociar métodos de pago 
+simulados para agilizar sus transacciones. 
+Requisito Especificación 
+RF-015 Registrarse, iniciar sesión y modificar datos del perfil. 
+RF-016 Administrar direcciones frecuentes (crear, actualizar, eliminar, 
+consultar). 
+RF-017 Gestionar métodos de pago simulados. 
+RF-018 Consultar envíos asociados y sus detalles. 
+3.2. Repartidor 
+La entidad Repartidor representa a las personas encargadas de transportar los 
+paquetes. Cada repartidor cuenta con un identificador único (idRepartidor), 
+nombre, documento, teléfono, estado de disponibilidad y zona de cobertura. 
+Requisito Especificación 
+RF-019 Crear, actualizar, eliminar y consultar repartidores. 
+RF-020 Cambiar disponibilidad (Activo/Inactivo/En ruta). 
+RF-021 Consultar envíos asignados. 
+3.3. Envio 
+La entidad Envío representa cada solicitud de transporte de un paquete. Contiene 
+un identificador único (idEnvio), origen y destino (tipo Dirección), información del 
+paquete (peso, dimensiones), costo, estado del envío (Solicitado, Asignado, En 
+Ruta, Entregado, Incidencia), fecha de creación y fecha estimada de entrega. 
+Puede estar asociado a un repartidor y a un usuario. 
+Requisito Especificación 
+RF-022 Crear nuevas solicitudes de envío. 
+RF-023 Actualizar estado del envío. 
+RF-024 Cancelar envío antes de ser asignado. 
+RF-025 Filtrar envíos por fecha, estado o zona. 
+RF-026 Consultar detalle de un envío. 
+3.4. Dirección 
+La entidad Dirección representa los lugares de origen o destino de un envío. 
+Incluye un identificador único (idDireccion), alias (ej. Casa, Oficina), calle, ciudad y 
+coordenadas simuladas. 
+Requisito Especificación 
+RF-027 Crear nuevas direcciones. 
+2 
+ 
+ 
+ PROYECTO FINAL 
+Plataforma de Logística 
+Curso: Programación //  
+Página 3 de 4 
+ 
+RF-028 Actualizar información de direcciones existentes. 
+RF-029 Eliminar direcciones. 
+RF-030 Consultar detalles de direcciones. 
+3.5. Tarifa 
+La entidad Tarifa define las reglas de cálculo del costo de un envío según criterios 
+como distancia, peso, volumen, prioridad o recargos adicionales. 
+Requisito Especificación 
+RF-031 Calcular costo estimado de un envío. 
+RF-032 Desglosar componentes de la tarifa (base, peso, volumen, prioridad, 
+recargos). 
+3.6. Pago 
+La entidad Pago representa la transacción financiera de un envío. Contiene un 
+identificador único (idPago), monto, fecha, método de pago (simulado) y resultado 
+(Aprobado/Rechazado). 
+Requisito Especificación 
+RF-033 Registrar pagos asociados a envíos. 
+RF-034 Consultar comprobantes de pago. 
+RF-035 Listar pagos por rango de fechas. 
+4. Requerimientos Tecnicos 
+Requisito Especificación 
+RF-036 Pensamiento computacional. 
+RF-037 Diagrama de clases con relaciones (Asociación, Composición, 
+Herencia), multiplicidad, roles, jerarquías, atributos y estética. Debe 
+cubrir: Usuario, Repartidor, Envío, Dirección, Tarifa, Pago, Incidencia (si 
+aplica) y clases de soporte (estrategias, decoradores, adaptadores, 
+etc.). 
+RF-038 Implementación técnica: estructura del proyecto, repositorio, datos 
+de prueba inicializados (usuarios, direcciones, repartidores, envíos, 
+pagos), aplicación funcional con JavaFX (pantallas para usuario y 
+admin). 
+RF-039 Generador de Reportes Operativos: exportar CSV/PDF (Apache POI / 
+PDFBox). Reportes sugeridos: entregas por periodo, tiempos promedio 
+por zona, ingresos por servicio adicional, top incidencias. Menú para 
+elegir tipo de reporte y rango de fechas. 
+RF-040 DTO: uso de Data Transfer Objects para aislar la capa de presentación 
+de la lógica de dominio (por ejemplo, EnvioDTO, TarifaDTO, PagoDTO). 
+RF-041 SOLID: la solución debe evidenciar aplicación de SRP, OCP, LSP, ISP, 
+DIP con ejemplos claros (clases pequeñas, interfaces específicas, 
+inversión de dependencias en estrategias/adaptadores, etc.). 
+5. Requerimientos Patrones 
+3 
+ 
+ 
+ PROYECTO FINAL 
+Plataforma de Logística 
+Curso: Programación //  
+Página 4 de 4 
+ 
+Se debe describir el/los requisitos donde se evidencia la necesidad del patrón, el 
+problema, el propósito y la solución (diagrama breve + código representativo). 
+Mínimo 3 creacionales, 3 estructurales y 3 de comportamiento. 
+Requisito Especificación 
+RF-042 Describir el (los) requisitos del proyecto donde se vea la necesidad de 
+implementar minino 3 patrones creacionales. Se debe considerar el 
+problema a resolver, el propósito y la solución. 
+● Singleton 
+● Otro de su elección 
+● Otro de su elección 
+RF-043 Describir el (los) requisitos del proyecto donde se vea la necesidad de 
+implementar minino 3 patrones estructurales. Se debe considerar el 
+problema a resolver, el propósito y la solución. 
+● De su elección 
+● De su elección 
+● De su elección 
+RF-044 Describir el (los) requisitos del proyecto donde se vea la necesidad de 
+implementar minino 3 patrones de comportamiento. Se debe 
+considerar el problema a resolver, el propósito y la solución. 
+● Strategy 
+● Otro de su elección 
+● Otro de su elección 
+6. Evaluación 
+La evaluación se realizar de la siguiente forma: 
+● Sustentación del proyecto de forma presencial. Deben de estar los 
+integrantes del grupo, si algún integrante no se presenta solo se les califica 
+a los integrantes que estén. 
+● Cumplimiento de los requisitos de la aplicación. 
+● Funcionamiento de la aplicación. 
+ 
+Importante: 
+La nota del proyecto está compuesta por dos partes: 
+1. La codificación, que se califica de 0 a 5 
+2. Un factor multiplicador basado en la sustentación, que varía de 0 a 1. 
+Este resultado, obtenido mediante la multiplicación de las dos notas (partes), nos 
+proporciona la nota final del proyecto. 
+ 
+Recuerden: 
+El profesor elige a la persona que realiza la sustentación, debido a que, todos los 
+integrantes del grupo deben estar en condiciones de sustentar. La persona 
+elegida, de acuerdo con su nivel de sustentación, determina el valor de la nota de 
+la sustentación grupal, que será multiplicada por el valor de la codificación. 
+4 
+ 

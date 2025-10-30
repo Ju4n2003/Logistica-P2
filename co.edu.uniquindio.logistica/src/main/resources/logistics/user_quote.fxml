@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="co.edu.uniquindio.logistica.viewController.UserQuoteController" spacing="12" style="-fx-padding: 20;">
+    <children>
+        <Label text="Usuario - Cotizar y Crear EnvÃ­o" style="-fx-font-size: 14; -fx-font-weight: bold;" />
+        <GridPane hgap="8" vgap="8">
+            <columnConstraints>
+                <ColumnConstraints percentWidth="25" />
+                <ColumnConstraints percentWidth="75" />
+            </columnConstraints>
+            <children>
+                <Label text="Origen:" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+                <ComboBox fx:id="origen" GridPane.rowIndex="0" GridPane.columnIndex="1" />
+                <Label text="Destino:" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+                <ComboBox fx:id="destino" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+                <Label text="Peso (kg):" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+                <TextField fx:id="peso" GridPane.rowIndex="2" GridPane.columnIndex="1" />
+                <Label text="Volumen (m3):" GridPane.rowIndex="3" GridPane.columnIndex="0" />
+                <TextField fx:id="volumen" GridPane.rowIndex="3" GridPane.columnIndex="1" />
+                <Label text="Prioridad:" GridPane.rowIndex="4" GridPane.columnIndex="0" />
+                <CheckBox fx:id="prioridad" GridPane.rowIndex="4" GridPane.columnIndex="1" />
+            </children>
+        </GridPane>
+        <HBox spacing="10">
+            <Button text="Cotizar" onAction="#onQuote" />
+            <Button text="Crear EnvÃ­o" onAction="#onCreate" />
+        </HBox>
+        <TextArea fx:id="resultado" prefRowCount="6" wrapText="true" />
+        <Label fx:id="status" />
+    </children>
+</VBox>
+

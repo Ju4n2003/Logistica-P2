@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="co.edu.uniquindio.logistica.viewController.UserProfileController" spacing="12" style="-fx-padding: 20;">
+    <children>
+        <Label text="Usuario - Perfil y Direcciones" style="-fx-font-size: 14; -fx-font-weight: bold;" />
+        <GridPane hgap="8" vgap="8">
+            <columnConstraints>
+                <ColumnConstraints percentWidth="25" />
+                <ColumnConstraints percentWidth="75" />
+            </columnConstraints>
+            <children>
+                <Label text="Alias:" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+                <TextField fx:id="alias" GridPane.rowIndex="0" GridPane.columnIndex="1" />
+                <Label text="Calle:" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+                <TextField fx:id="calle" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+                <Label text="Ciudad:" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+                <TextField fx:id="ciudad" GridPane.rowIndex="2" GridPane.columnIndex="1" />
+            </children>
+        </GridPane>
+        <HBox spacing="10">
+            <Button text="Agregar DirecciÃ³n" onAction="#onAddDireccion" />
+            <Button text="Eliminar Seleccionada" onAction="#onRemoveDireccion" />
+        </HBox>
+        <ListView fx:id="listaDirecciones" prefHeight="240" />
+        <Label fx:id="status" />
+    </children>
+</VBox>
+

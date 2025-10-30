@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="co.edu.uniquindio.logistica.viewController.AdminAssignController" spacing="12" style="-fx-padding: 20;">
+    <children>
+        <Label text="Admin - Asignaciones e Incidencias" style="-fx-font-size: 14; -fx-font-weight: bold;" />
+        <HBox spacing="12">
+            <VBox spacing="8" VBox.vgrow="ALWAYS">
+                <Label text="Envios" />
+                <ListView fx:id="listaEnvios" prefWidth="380" prefHeight="280" />
+            </VBox>
+            <VBox spacing="8" VBox.vgrow="ALWAYS">
+                <Label text="Repartidores" />
+                <ListView fx:id="listaRepartidores" prefWidth="380" prefHeight="280" />
+            </VBox>
+        </HBox>
+        <HBox spacing="14">
+            <Button text="Asignar" onAction="#onAssign" prefWidth="120" />
+            <Button text="Reasignar" onAction="#onReassign" prefWidth="120" />
+            <Label text="Estado:" />
+            <ComboBox fx:id="estado" prefWidth="160" />
+            <Button text="Cambiar estado" onAction="#onChangeEstado" prefWidth="150" />
+            <Button text="Marcar como Entregado" onAction="#onMarkDelivered" prefWidth="200" />
+            <TextField fx:id="incidencia" promptText="DescripciÃ³n incidencia" HBox.hgrow="ALWAYS" prefWidth="260" />
+            <TextField fx:id="zona" promptText="Zona" prefWidth="140" />
+            <Button text="Registrar incidencia" onAction="#onIncidencia" prefWidth="170" />
+        </HBox>
+        <TextArea fx:id="detalle" prefRowCount="6" wrapText="true" />
+        <Label fx:id="status" />
+    </children>
+</VBox>
+

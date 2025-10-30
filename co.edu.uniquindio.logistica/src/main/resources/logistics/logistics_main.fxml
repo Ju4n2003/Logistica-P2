@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:controller="co.edu.uniquindio.logistica.viewController.LogisticsMainController" xmlns:fx="http://javafx.com/fxml" prefWidth="800" prefHeight="500">
+    <top>
+        <ToolBar>
+            <Label text="Plataforma de LogÃ­stica" style="-fx-font-size: 16; -fx-font-weight: bold;" />
+            <Pane HBox.hgrow="ALWAYS" />
+            <Button text="Usuario" onAction="#openUser" />
+            <Button text="Perfil" onAction="#openProfile" />
+            <Button text="Cotizar" onAction="#openQuote" />
+            <Button text="Mis EnvÃ­os" onAction="#openShipments" />
+            <Button text="Admin" onAction="#openAdmin" />
+            <Button text="Cerrar sesiÃ³n" onAction="#logout" />
+        </ToolBar>
+    </top>
+    <center>
+        <StackPane fx:id="content" style="-fx-padding: 20;">
+            <Label text="Selecciona Usuario o Admin para comenzar." />
+        </StackPane>
+    </center>
+</BorderPane>
+

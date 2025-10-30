@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="co.edu.uniquindio.logistica.viewController.UserShipmentsController" spacing="12" style="-fx-padding: 20;">
+    <children>
+        <Label text="Usuario - Mis EnvÃ­os" style="-fx-font-size: 14; -fx-font-weight: bold;" />
+        <HBox spacing="8">
+            <Label text="Desde:" />
+            <DatePicker fx:id="desde" />
+            <Label text="Hasta:" />
+            <DatePicker fx:id="hasta" />
+            <Label text="Estado:" />
+            <ComboBox fx:id="estado" />
+            <Button text="Aplicar" onAction="#onApply" />
+            <Pane HBox.hgrow="ALWAYS" />
+            <Button text="Exportar CSV" onAction="#onExportCsv" />
+            <Button text="Exportar PDF" onAction="#onExportPdf" />
+        </HBox>
+        <HBox spacing="10">
+            <Button text="Refrescar" onAction="#onRefresh" />
+            <Button text="Pagar" onAction="#onPay" />
+            <Button text="Ver Detalle" onAction="#onTrack" />
+        </HBox>
+        <ListView fx:id="listaEnvios" prefHeight="260" />
+        <TextArea fx:id="detalle" prefRowCount="6" wrapText="true" />
+        <Label fx:id="status" />
+    </children>
+</VBox>
+

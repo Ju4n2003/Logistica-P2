@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="co.edu.uniquindio.logistica.viewController.AdminMetricsController" spacing="12" style="-fx-padding: 16;">
+    <children>
+        <HBox spacing="14">
+            <Label text="Desde:" />
+            <DatePicker fx:id="desde" prefWidth="160" />
+            <Label text="Hasta:" />
+            <DatePicker fx:id="hasta" prefWidth="160" />
+            <Button text="Aplicar" onAction="#onApply" prefWidth="120" />
+            <Pane HBox.hgrow="ALWAYS" />
+            <Button text="Exportar CSV" onAction="#onExportCsv" prefWidth="150" />
+            <Button text="Exportar PDF" onAction="#onExportPdf" prefWidth="150" />
+        </HBox>
+        <TitledPane text="DistribuciÃ³n por Estado (EnvÃ­os)" expanded="true">
+            <content>
+                <PieChart fx:id="chartEstados" prefHeight="260" />
+            </content>
+        </TitledPane>
+        <TitledPane text="Ingresos por Mes (Pagos Aprobados)" expanded="true">
+            <content>
+                <BarChart fx:id="chartIngresos" prefHeight="260">
+                    <xAxis>
+                        <CategoryAxis label="Mes" />
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis label="Ingresos" />
+                    </yAxis>
+                </BarChart>
+            </content>
+        </TitledPane>
+        <TitledPane text="EnvÃ­os por DÃ­a" expanded="true">
+            <content>
+                <LineChart fx:id="chartEnviosDia" prefHeight="260">
+                    <xAxis>
+                        <CategoryAxis label="Fecha" />
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis label="Cantidad" />
+                    </yAxis>
+                </LineChart>
+            </content>
+        </TitledPane>
+        <Label fx:id="status" />
+    </children>
+</VBox>
+

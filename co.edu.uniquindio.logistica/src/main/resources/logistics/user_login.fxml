@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="co.edu.uniquindio.logistica.viewController.UserLoginController" spacing="10" style="-fx-padding: 20;">
+    <children>
+        <Label text="Usuario - Login / Registro" style="-fx-font-size: 14; -fx-font-weight: bold;" />
+        <GridPane hgap="8" vgap="8">
+            <columnConstraints>
+                <ColumnConstraints percentWidth="30" />
+                <ColumnConstraints percentWidth="70" />
+            </columnConstraints>
+            <children>
+                <Label text="Correo:" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+                <TextField fx:id="correo" GridPane.rowIndex="0" GridPane.columnIndex="1" prefWidth="320" />
+                <Label text="ContraseÃ±a:" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+                <PasswordField fx:id="password" GridPane.rowIndex="1" GridPane.columnIndex="1" prefWidth="240" />
+            </children>
+        </GridPane>
+        <HBox spacing="14">
+            <Button text="Login" onAction="#onLogin" prefWidth="120" />
+            <Button text="Registro rÃ¡pido" onAction="#onRegister" prefWidth="160" />
+        </HBox>
+        <Label fx:id="status" />
+    </children>
+</VBox>
+

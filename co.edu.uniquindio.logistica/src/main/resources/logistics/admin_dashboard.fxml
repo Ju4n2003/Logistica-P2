@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="co.edu.uniquindio.logistica.viewController.AdminDashboardController" prefWidth="800" prefHeight="500">
+    <top>
+        <ToolBar>
+            <Label text="Admin - Panel" style="-fx-font-size: 14; -fx-font-weight: bold;" />
+            <Pane HBox.hgrow="ALWAYS" />
+            <Button text="Usuarios" onAction="#openUsers" />
+            <Button text="Repartidores" onAction="#openDrivers" />
+            <Button text="Asignaciones" onAction="#openAssign" />
+            <Button text="MÃ©tricas" onAction="#openMetrics" />
+        </ToolBar>
+    </top>
+    <center>
+        <StackPane fx:id="content" style="-fx-padding: 20;">
+            <Label text="Selecciona una opciÃ³n del panel de administraciÃ³n." />
+        </StackPane>
+    </center>
+</BorderPane>
+

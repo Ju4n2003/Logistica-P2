@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="co.edu.uniquindio.logistica.viewController.AdminDriversController" spacing="12" style="-fx-padding: 20;">
+    <children>
+        <Label text="Admin - Repartidores" style="-fx-font-size: 14; -fx-font-weight: bold;" />
+        <GridPane hgap="8" vgap="8">
+            <columnConstraints>
+                <ColumnConstraints percentWidth="25" />
+                <ColumnConstraints percentWidth="75" />
+            </columnConstraints>
+            <children>
+                <Label text="Nombre" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+                <TextField fx:id="nombre" GridPane.rowIndex="0" GridPane.columnIndex="1" prefWidth="320" />
+                <Label text="Documento" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+                <TextField fx:id="documento" GridPane.rowIndex="1" GridPane.columnIndex="1" prefWidth="220" />
+                <Label text="TelÃ©fono" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+                <TextField fx:id="telefono" GridPane.rowIndex="2" GridPane.columnIndex="1" prefWidth="220" />
+                <Label text="Disponibilidad" GridPane.rowIndex="3" GridPane.columnIndex="0" />
+                <ComboBox fx:id="disponibilidad" GridPane.rowIndex="3" GridPane.columnIndex="1" prefWidth="200" />
+                <Label text="Zona" GridPane.rowIndex="4" GridPane.columnIndex="0" />
+                <TextField fx:id="zona" GridPane.rowIndex="4" GridPane.columnIndex="1" prefWidth="240" />
+            </children>
+        </GridPane>
+        <HBox spacing="14">
+            <Button text="Crear" onAction="#onCreate" prefWidth="120" />
+            <Button text="Actualizar" onAction="#onUpdate" prefWidth="120" />
+            <Button text="Eliminar" onAction="#onDelete" prefWidth="120" />
+            <Button text="Refrescar" onAction="#onRefresh" prefWidth="120" />
+        </HBox>
+        <ListView fx:id="lista" prefHeight="300" />
+        <Label fx:id="status" />
+    </children>
+</VBox>
+
