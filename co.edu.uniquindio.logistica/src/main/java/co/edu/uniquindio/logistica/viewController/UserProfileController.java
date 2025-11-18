@@ -1,4 +1,4 @@
-﻿package co.edu.uniquindio.logistica.viewController;
+package co.edu.uniquindio.logistica.viewController;
 
 import co.edu.uniquindio.logistica.Session;
 import co.edu.uniquindio.logistica.dto.DireccionDTO;
@@ -32,7 +32,7 @@ public class UserProfileController {
     listaDirecciones.getItems().clear();
     UsuarioDTO u = Session.getCurrentUser();
     if (u == null) {
-      status.setText("Inicia sesiÃ³n para gestionar direcciones");
+      status.setText("Inicia sesion para gestionar direcciones");
       return;
     }
     var user = store.usuarios().get(u.idUsuario());
@@ -72,7 +72,7 @@ public class UserProfileController {
     calle.clear();
     ciudad.clear();
     refreshList();
-    status.setText("DirecciÃ³n agregada");
+    status.setText("Direccion agregada");
   }
 
   @FXML
@@ -87,6 +87,6 @@ public class UserProfileController {
     String id = selected.split(" \\|")[0].trim();
     userService.removeDireccion(u.idUsuario(), id);
     refreshList();
-    status.setText("DirecciÃ³n eliminada");
+    status.setText("Direccion eliminada");
   }
 }

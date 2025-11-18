@@ -1,4 +1,4 @@
-﻿package co.edu.uniquindio.logistica.viewController;
+package co.edu.uniquindio.logistica.viewController;
 
 import co.edu.uniquindio.logistica.Session;
 import co.edu.uniquindio.logistica.dto.EnvioDTO;
@@ -50,7 +50,7 @@ public class UserQuoteController {
   private void cargarDireccionesUsuario() {
     UsuarioDTO u = Session.getCurrentUser();
     if (u == null) {
-      status.setText("Inicia sesiÃ³n para cotizar");
+      status.setText("Inicia sesion para cotizar");
       return;
     }
     var user = store.usuarios().get(u.idUsuario());
@@ -99,9 +99,9 @@ public class UserQuoteController {
               + "\n"
               + "Total: "
               + lastQuote.total());
-      status.setText("CotizaciÃ³n lista");
+      status.setText("Cotizacion lista");
     } catch (NumberFormatException ex) {
-      status.setText("Peso/Volumen invÃ¡lidos");
+      status.setText("Peso/Volumen invalidos");
     }
   }
 

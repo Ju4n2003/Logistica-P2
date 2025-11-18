@@ -1,4 +1,4 @@
-﻿package co.edu.uniquindio.logistica.model;
+package co.edu.uniquindio.logistica.model;
 
 public class Tarifa {
   private double base;

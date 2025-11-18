@@ -1,4 +1,4 @@
-﻿package co.edu.uniquindio.logistica.viewController;
+package co.edu.uniquindio.logistica.viewController;
 
 import co.edu.uniquindio.logistica.Session;
 import co.edu.uniquindio.logistica.dto.EnvioDTO;
@@ -69,7 +69,7 @@ public class UserShipmentsController {
       String line = e.idEnvio() + " | Estado:" + e.estado() + " | Costo:" + e.costo();
       listaEnvios.getItems().add(line);
     }
-    status.setText("EnvÃ­os: " + envios.size());
+    status.setText("Envios: " + envios.size());
   }
 
   @FXML
@@ -211,7 +211,7 @@ public class UserShipmentsController {
           cs.setFont(PDType1Font.HELVETICA_BOLD, 14);
           cs.beginText();
           cs.newLineAtOffset(50, y);
-          cs.showText("Mis EnvÃ­os - " + u.nombreCompleto());
+          cs.showText("Mis Envios - " + u.nombreCompleto());
           cs.endText();
           y -= 18;
           cs.setFont(PDType1Font.HELVETICA, 11);
@@ -246,14 +246,14 @@ public class UserShipmentsController {
                 fecha,
                 rep);
             y -= 14;
-            if (y < 80) break; // simple corte si se llena la pÃƒÂ¡gina
+            if (y < 80) break; // simple corte si se llena la pagina
           }
 
           y -= 16;
           cs.setFont(PDType1Font.HELVETICA_BOLD, 11);
           cs.beginText();
           cs.newLineAtOffset(50, y);
-          cs.showText("Total envÃ­os: " + envios.size());
+          cs.showText("Total envios: " + envios.size());
           cs.endText();
         }
         doc.save(out.toFile());
@@ -289,7 +289,7 @@ public class UserShipmentsController {
   private String truncate(String s, int max) {
     if (s == null) return "";
     return s.length() <= max ? s : s.substring(0, max - 1) + "â€¦";
-  }
+  }     
 
   private String safe(String s) {
     return s == null ? "" : s;

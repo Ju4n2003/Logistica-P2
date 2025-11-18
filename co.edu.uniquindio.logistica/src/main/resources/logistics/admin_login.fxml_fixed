@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="co.edu.uniquindio.logistica.viewController.AdminLoginController" spacing="10" style="-fx-padding: 24;" fx:id="root">
+    <Label text="Login Administrador" style="-fx-font-size: 16; -fx-font-weight: bold;" />
+    <TextField fx:id="correo" promptText="Correo" />
+    <PasswordField fx:id="password" promptText="Contraseña" />
+    <Button text="Ingresar" onAction="#onLogin" />
+    <Label fx:id="status" />
+</VBox>

@@ -1,4 +1,4 @@
-﻿package co.edu.uniquindio.logistica.viewController;
+package co.edu.uniquindio.logistica.viewController;
 
 import co.edu.uniquindio.logistica.dto.EnvioDTO;
 import co.edu.uniquindio.logistica.model.ShipmentStatus;
@@ -75,7 +75,7 @@ public class AdminAssignController {
       listaRepartidores.getItems().add(line);
     }
     status.setText(
-        "EnvÂ­ios:" + store.envios().size() + ", Repartidores:" + store.repartidores().size());
+        "Envios:" + store.envios().size() + ", Repartidores:" + store.repartidores().size());
   }
 
   private String parseId(String line) {
@@ -193,7 +193,7 @@ public class AdminAssignController {
     Alert confirm =
         new Alert(
             Alert.AlertType.CONFIRMATION,
-            "Ã‚Â¿Confirmas marcar el envio como ENTREGADO?",
+            "Confirmas marcar el envio como ENTREGADO?",
             ButtonType.OK,
             ButtonType.CANCEL);
     confirm.setHeaderText(null);

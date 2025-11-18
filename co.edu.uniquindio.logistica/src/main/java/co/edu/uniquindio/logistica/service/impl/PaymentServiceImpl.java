@@ -1,4 +1,4 @@
-﻿package co.edu.uniquindio.logistica.service.impl;
+package co.edu.uniquindio.logistica.service.impl;
 
 import co.edu.uniquindio.logistica.dto.PagoDTO;
 import co.edu.uniquindio.logistica.model.Pago;

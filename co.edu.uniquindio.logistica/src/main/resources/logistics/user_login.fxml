@@ -1,28 +1,35 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="co.edu.uniquindio.logistica.viewController.UserLoginController" spacing="10" style="-fx-padding: 20;">
+<VBox spacing="10" style="-fx-padding: 20;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="co.edu.uniquindio.logistica.viewController.UserLoginController">
     <children>
-        <Label text="Usuario - Login / Registro" style="-fx-font-size: 14; -fx-font-weight: bold;" />
+        <Label style="-fx-font-size: 14; -fx-font-weight: bold;" text="Usuario - Login / Registro" />
         <GridPane hgap="8" vgap="8">
             <columnConstraints>
                 <ColumnConstraints percentWidth="30" />
                 <ColumnConstraints percentWidth="70" />
             </columnConstraints>
             <children>
-                <Label text="Correo:" GridPane.rowIndex="0" GridPane.columnIndex="0" />
-                <TextField fx:id="correo" GridPane.rowIndex="0" GridPane.columnIndex="1" prefWidth="320" />
-                <Label text="ContraseÃ±a:" GridPane.rowIndex="1" GridPane.columnIndex="0" />
-                <PasswordField fx:id="password" GridPane.rowIndex="1" GridPane.columnIndex="1" prefWidth="240" />
+                <Label text="Correo:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <TextField fx:id="correo" prefWidth="320" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                <Label text="Contraseña:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <PasswordField fx:id="password" prefWidth="240" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             </children>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
         </GridPane>
         <HBox spacing="14">
-            <Button text="Login" onAction="#onLogin" prefWidth="120" />
-            <Button text="Registro rÃ¡pido" onAction="#onRegister" prefWidth="160" />
+           <children>
+               <Button onAction="#onLogin" prefWidth="120" text="Login" />
+               <Button onAction="#onRegister" prefWidth="160" text="Registro rapido" />
+           </children>
         </HBox>
         <Label fx:id="status" />
     </children>
 </VBox>
-

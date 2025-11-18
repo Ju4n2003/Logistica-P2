@@ -1,4 +1,4 @@
-﻿module co.edu.uniquindio.logistica {
+module co.edu.uniquindio.logistica {
   requires javafx.controls;
   requires javafx.fxml;
   requires javafx.graphics;

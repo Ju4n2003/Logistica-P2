@@ -1,4 +1,4 @@
-﻿package co.edu.uniquindio.logistica.viewController;
+package co.edu.uniquindio.logistica.viewController;
 
 import co.edu.uniquindio.logistica.model.Pago;
 import co.edu.uniquindio.logistica.model.PaymentResult;
@@ -194,7 +194,7 @@ public class AdminMetricsController {
         cs.setFont(PDType1Font.HELVETICA_BOLD, 14);
         cs.beginText();
         cs.newLineAtOffset(50, y);
-        cs.showText("Reporte de MÃ©tricas - LogÃ­stica");
+        cs.showText("Reporte de Metricas - Logistica");
         cs.endText();
         y -= 20;
         cs.setFont(PDType1Font.HELVETICA, 11);
@@ -261,7 +261,7 @@ public class AdminMetricsController {
         }
         cs.beginText();
         cs.newLineAtOffset(50, y);
-        cs.showText("EnvÃ­os por DÃ­a:");
+        cs.showText("Envios por Dia:");
         cs.endText();
         y -= 16;
         for (var entry : enviosDia.entrySet()) {

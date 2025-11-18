@@ -1,4 +1,4 @@
-﻿package co.edu.uniquindio.logistica.viewController;
+package co.edu.uniquindio.logistica.viewController;
 
 import co.edu.uniquindio.logistica.Session;
 import co.edu.uniquindio.logistica.repository.InMemoryStore;
@@ -26,7 +26,7 @@ public class AdminLoginController {
     String c = correo.getText();
     String p = password.getText();
     if (c == null || c.isBlank() || p == null || p.isBlank()) {
-      status.setText("Ingrese correo y contraseÃ±a");
+      status.setText("Ingrese correo y contrasena");
       return;
     }
     String saved = store.credentials().get(c);
@@ -35,11 +35,11 @@ public class AdminLoginController {
       // Navegar al dashboard
       Node node = FXMLLoader.load(getClass().getResource("/logistics/admin_dashboard.fxml"));
       // Reemplazar contenido del parent (root estÃ¡ dentro de StackPane)
-      root.getParent().lookupAll("*");
+      root.getParent().lookupAll("*"); 
       // root.getScene() puede ser null en tests; asumiendo UI activa:
       ((javafx.scene.layout.StackPane) root.getParent()).getChildren().setAll(node);
     } else {
-      status.setText("Credenciales invÃ¡lidas");
+      status.setText("Credenciales invalidas");
     }
   }
 }

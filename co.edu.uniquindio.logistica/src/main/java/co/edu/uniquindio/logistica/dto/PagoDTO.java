@@ -1,4 +1,4 @@
-﻿package co.edu.uniquindio.logistica.dto;
+package co.edu.uniquindio.logistica.dto;
 
 import java.time.LocalDateTime;
 

@@ -1,4 +1,4 @@
-﻿package co.edu.uniquindio.logistica.dto;
+package co.edu.uniquindio.logistica.dto;
 
 /** Datos de un repartidor (identificacion, contacto, disponibilidad y zona). */
 public record RepartidorDTO(

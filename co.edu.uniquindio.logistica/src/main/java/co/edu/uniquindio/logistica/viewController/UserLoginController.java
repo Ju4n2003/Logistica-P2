@@ -1,4 +1,4 @@
-﻿package co.edu.uniquindio.logistica.viewController;
+package co.edu.uniquindio.logistica.viewController;
 
 import co.edu.uniquindio.logistica.Session;
 import co.edu.uniquindio.logistica.dto.UsuarioDTO;
@@ -34,7 +34,7 @@ public class UserLoginController {
     String c = correo.getText();
     String p = password.getText();
     if (c == null || c.isBlank() || p == null || p.isBlank()) {
-      status.setText("Ingrese correo y contraseÃ±a");
+      status.setText("Ingrese correo y contrasena");
       return;
     }
     UsuarioDTO nuevo = new UsuarioDTO(null, c, c, "");

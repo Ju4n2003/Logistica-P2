@@ -1,4 +1,4 @@
-﻿package co.edu.uniquindio.logistica.viewController;
+package co.edu.uniquindio.logistica.viewController;
 
 import co.edu.uniquindio.logistica.dto.UsuarioDTO;
 import co.edu.uniquindio.logistica.repository.InMemoryStore;
@@ -105,7 +105,7 @@ public class AdminUsersController {
     String c = correo.getText();
     String p = password != null ? password.getText() : null;
     if (isBlank(c) || isBlank(p)) {
-      status.setText("Ingrese correo y contraseÃ±a");
+      status.setText("Ingrese correo y contrasena");
       return;
     }
     // Verificar que el correo exista en la lista de usuarios
@@ -115,7 +115,7 @@ public class AdminUsersController {
       return;
     }
     store.credentials().put(c, p);
-    status.setText("ContraseÃ±a establecida para " + c);
+    status.setText("Contrasena establecida para " + c);
     if (password != null) password.clear();
   }
 

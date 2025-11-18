@@ -1,4 +1,4 @@
-﻿package co.edu.uniquindio.logistica.dto;
+package co.edu.uniquindio.logistica.dto;
 
 /** Desglose de una cotizacion de tarifa (base, peso, volumen, prioridad, recargos y total). */
 public record TarifaDTO(

@@ -1,4 +1,4 @@
-﻿package co.edu.uniquindio.logistica;
+package co.edu.uniquindio.logistica;
 
 import co.edu.uniquindio.logistica.dto.UsuarioDTO;
 

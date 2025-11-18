@@ -1,4 +1,4 @@
-﻿package co.edu.uniquindio.logistica.viewController;
+package co.edu.uniquindio.logistica.viewController;
 
 import co.edu.uniquindio.logistica.dto.RepartidorDTO;
 import co.edu.uniquindio.logistica.service.IAdminService;

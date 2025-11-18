@@ -1,4 +1,4 @@
-﻿package co.edu.uniquindio.logistica.model;
+package co.edu.uniquindio.logistica.model;
 
 import java.util.ArrayList;
 import java.util.List;
