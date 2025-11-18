@@ -1,4 +1,4 @@
-﻿package co.edu.uniquindio.logistica.repository;
+package co.edu.uniquindio.logistica.repository;
 
 import co.edu.uniquindio.logistica.model.*;
 import java.time.LocalDateTime;
@@ -6,13 +6,28 @@ import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * AlmacÃ©n en memoria (Singleton) para entidades del mÃ³dulo de logÃ­stica. Provee generaciÃ³n de ids,
- * mapas concurrentes por entidad y credenciales demo.
+ * Almacén en memoria que implementa el patrón Singleton.
+ * Garantiza una única instancia global para el almacenamiento de entidades
+ * del módulo de logística. Provee generación de ids, mapas concurrentes 
+ * por entidad y credenciales demo.
+ * 
+ * Aplicación del patrón Singleton:
+ * - Problema: Necesidad de un almacenamiento centralizado y consistente 
+ *   para toda la aplicación sin múltiples instancias
+ * - Propósito: Controlar el acceso a un único punto de almacenamiento 
+ *   y compartir datos entre todos los componentes
+ * - Solución: Constructor privado, instancia estática única y método 
+ *   público de acceso global
  */
 public class InMemoryStore {
+  
+  /**
+   * Instancia única del Singleton.
+   * Se inicializa de forma eager (temprana) para garantizar thread-safety.
+   */
   private static final InMemoryStore INSTANCE = new InMemoryStore();
 
-  /** Obtiene la instancia Ãºnica del almacÃ©n en memoria. */
+  /** Obtiene la instancia única del almacén en memoria. */
   public static InMemoryStore getInstance() {
     return INSTANCE;
   }
